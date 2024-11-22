@@ -73,7 +73,10 @@ function generateMenu() {
                                         <button class="quantity-button" id="increaseBtn-${item.id}" onclick="addQ(${item.id}, 1)">+</button>
                                     </div>
                                     <div class="col align-content-center">
-                                        <button class="btn btn-success" style="width: 100%;" id="btn-cost-${item.id}">เพิ่มลงตะกร้า ฿${item.price}</button>
+                                        <button class="btn btn-success" style="width: 100%;" id="btn-cost-${item.id}"
+                                            onclick="addToCart(${item.id})">
+                                            เพิ่มลงตะกร้า ฿${item.price}
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -114,10 +117,115 @@ function addQ(itemId, amount) {
     calBtnCost(itemId);
 }
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
+function updateCartDisplay() {
+    const itemCartAll = document.getElementById('itemCartAll');
+    const cartCost = document.getElementById('cartCost');
+    const cartAmount = document.getElementById('cartAmount');
+    const cartCostFooter = document.getElementById('cartCostFooter');
+    const cartAmountFooter = document.getElementById('cartAmountFooter');
 
-const name = urlParams.get('name');
-const age = urlParams.get('age');
+    itemCartAll.innerHTML = ""; // Clear previous cart items
 
-document.getElementById('1').innerHTML = `Name: ${name}, Age: ${age}`;
+    if (cart.length === 0) {
+        itemCartAll.innerHTML = "<p>Your cart is empty.</p>";
+        cartCost.innerText = "฿0.00";
+        cartAmount.innerText = "0";
+        cartCostFooter.innerText = "฿0.00";
+        cartAmountFooter.innerText = "0";
+        return;
+    }
+
+    let totalCost = 0;
+    let totalItems = 0;
+
+    // Loop through cart items and populate the cart display
+    for (let i = 0; i < cart.length; i++) {
+        const cartItem = cart[i];
+        const itemCost = cartItem.price * cartItem.quantity;
+        totalCost += itemCost;
+        totalItems += cartItem.quantity;
+
+        const cartHTML = `
+            <div class="card cart mt-1">
+                <div class="card-body">
+                    <div class="row cart">
+                        <div class="col-auto">
+                            <img src="${cartItem.imageUrl}" width="70px" alt="">
+                            <span style="color: #274b44;" id="cartTitle">${cartItem.name}</span>
+                            <span>฿${itemCost.toFixed(2)}</span>
+                        </div>
+                        <div class="col-auto d-flex align-items-center"
+                            style="height: auto; position: absolute; right: 0; bottom: 25%;">
+                            <button class="quantity-button" onclick="addQCart(${cartItem.id}, -1)" style="color: black;">-</button>
+                            <input type="number" id="quantityCart-${cartItem.id}" class="quantity-display"
+                                value="${cartItem.quantity}" min="1" onchange="updateCartQuantity(${cartItem.id}, this.value)" style="height: fit-content;">
+                            <button class="quantity-button" onclick="addQCart(${cartItem.id}, 1)" style="color: black;">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        itemCartAll.innerHTML += cartHTML;
+    }
+
+    // Update footer and top cart summary
+    const totalCostFormatted = `฿${totalCost.toFixed(2)}`;
+    cartCost.innerText = totalCostFormatted;
+    cartAmount.innerText = totalItems;
+    cartCostFooter.innerText = totalCostFormatted;
+    cartAmountFooter.innerText = totalItems;
+}
+
+
+
+function addQCart(itemId, amount) {
+    const cartItem = cart.find(item => item.id === itemId);
+    if (!cartItem) return;
+
+    cartItem.quantity = Math.max(1, cartItem.quantity + amount);
+    updateCartDisplay();
+}
+
+function updateCartQuantity(itemId, newQuantity) {
+    const cartItem = cart.find(item => item.id === itemId);
+    if (!cartItem) return;
+
+    cartItem.quantity = Math.max(1, parseInt(newQuantity));
+    updateCartDisplay();
+}
+
+
+function addToCart(itemId) {
+    const item = menuItems.find(item => item.id === itemId);
+    const quantityInput = document.getElementById(`quantity-${itemId}`);
+    const quantity = parseInt(quantityInput.value);
+
+    const existingItem = cart.find(cartItem => cartItem.id === itemId);
+
+    if (existingItem) {
+        existingItem.quantity += quantity;
+    } else {
+        cart.push({
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            quantity: quantity,
+            imageUrl: item.imageUrl,
+        });
+    }
+
+    updateCartDisplay();
+    const notyf = new Notyf();
+    notyf.success(`Added ${quantity} x ${item.name} to the cart!`);
+
+}
+// const queryString = window.location.search;
+// const urlParams = new URLSearchParams(queryString);
+
+// const name = urlParams.get('name');
+// const age = urlParams.get('age');
+
+// document.getElementById('1').innerHTML = `Name: ${name}, Age: ${age}`;
+
+
+

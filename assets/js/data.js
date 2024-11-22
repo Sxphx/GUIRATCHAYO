@@ -62,3 +62,5 @@ const menuItems = [
         catagories: "Yam"
     }
 ];
+
+let cart = [];

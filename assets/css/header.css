@@ -10,6 +10,11 @@ a {
   color: white;
 }
 
+a:hover {
+  text-decoration: none;
+  color: rgb(212, 210, 210);
+}
+
 body {
   background-color: #feeeddee;
   margin: 0;

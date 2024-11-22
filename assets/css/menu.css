@@ -7,6 +7,9 @@
 
 }
 
+body {
+    height: 200%;
+}
 .item {
     background-color: white;
     border: 1px solid #ddd;
@@ -42,6 +45,11 @@
     transition: all ease 0.5s;
 }
 
+.card .cart {
+    transform: scale(1.01) !important;
+    transition: all ease 0.5s;
+}
+
 .left {
     flex: 1;
     height: fit-content;
@@ -67,6 +75,11 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.food-btn:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
 }
 
 a {
@@ -150,4 +163,36 @@ a.catagories {
 .catagories-2 {
     background: #ada28f;
     height: 10px !important;
+}
+
+.costCart {
+    position: absolute;
+    left: auto;
+    right: 0;
+    margin-right: 5rem;
+}
+
+.fixed-container {
+    position: fixed;
+    bottom: 0;
+    width: 95%;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 15px;
+    left: 0;
+    right: 0;
+    justify-self: center;
+    background-color: #274b44;
+    z-index: 1000;
+    transition: transform 0.2s ease-in-out;
+}
+
+.fixed-container:hover {
+    transform: scale(1.01);
+}
+
+.footer-cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

@@ -14,8 +14,8 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
     <title>Menu</title>
     <link rel="stylesheet" href="./assets/css/menu.css">
     <link rel="stylesheet" href="./assets/css/header.css">
@@ -38,10 +38,9 @@
                     </button>
                     <a href="./index.html">
                         <button type="button" class="nav-btn">
-                            <i class="fa-solid fa-book"></i> <span class="Nav-span">Book
-                                Now!</span>
+                            <i class="fa-solid fa-book"></i> <span class="Nav-span">Book Now!</span>
+                        </button>
                     </a>
-                    </button>
                     <button type="button" class="nav-btn">
                         <i class="fa-solid fa-phone"></i> <span class="Nav-span">Contact Us</span>
                     </button>
@@ -80,16 +79,67 @@
             align-items: center;
             font-size: 1.5rem;">
             <p class="ms-5">ยำ 🌶️ 🍋‍🟩 &nbsp;</p>
-
         </div>
         <hr class="catagories-2">
         <div id="menu-container-yam">
-
         </div>
+        <div class="blank" style="height: 100px;"></div>
     </main>
+
     <div id="modal-all"></div>
+
+    <div class="container d-flex">
+        <div class="fixed-container d-flex" style="color: white; cursor: pointer;" data-toggle="modal"
+            data-target="#exampleModal">
+            <i class="fa-solid fa-cart-shopping me-5" style="font-size: 1.5rem; color:white;"></i>
+            <span id="cartAmount">0</span>&nbsp;<span>รายการในตะกร้า</span>
+            <div class="costCart">
+                <span id="cartCost">
+                    ฿0
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="exampleModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-${item.id}"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: #274b44;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel-${item.id}">
+                        <p class="mb-0" style="color: white;">รายการในตะกร้า</p>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="order-food">
+                    <div class="item-cart" id="itemCartAll"></div>
+
+                    <div class="modal-footer">
+                        <div class="card w-100">
+                            <div class="card-body footer-cart d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span>รวมทั้งหมด:</span>
+                                    <span id="cartCostFooter" class="ms-2">฿0.00</span>
+                                </div>
+                                <button class="food-btn w-100 ms-3" onclick="">สั่ง
+                                    <span id="cartAmountFooter">0</span> รายการ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/js/alert.js"></script>
     <script src="./assets/js/menu.js"></script>
     <script src="./assets/js/script.js"></script>
+
+
 </body>
 
 </html>

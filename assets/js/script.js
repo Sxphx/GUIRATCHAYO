@@ -22,8 +22,6 @@ dateInput.addEventListener("change", () => {
   const selectedDate = new Date(dateInput.value);
   const day = selectedDate.getDay(6);
 
-
-
   const times = {
     0: ["18:00", "01:00"],
     1: ["18:00", "01:00"],
@@ -57,9 +55,7 @@ function generateTimeOptions(start, end) {
     (startHour === endHour && startMinute <= endMinute)
   ) {
     const hour = startHour % 24;
-    const formattedTime = `${String(hour).padStart(2, "0")}:${String(
-      startMinute
-    ).padStart(2, "0")}`;
+    const formattedTime = `${String(hour).padStart(2, "0")}:${String(startMinute).padStart(2, "0")}`;
     const option = document.createElement("option");
     option.value = formattedTime;
     option.textContent = formattedTime;

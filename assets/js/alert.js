@@ -60,4 +60,9 @@ function bookSuc(customerName, phone, amount, date, time) {
         }
     });
 }
+function showToastrSuccess(message) {
+    toastr.success(message, {
+        timeOut: 5000
+    });
+}
 
