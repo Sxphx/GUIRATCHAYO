@@ -4,43 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Menu recommend Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.4.0/css/pro.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
-
-    <title>Menu</title>
-    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/Menu.css">
     <link rel="stylesheet" href="./assets/css/header.css">
-    <script src="./assets/js/data.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav class="navbar">
-            <div class="container-fluid">
+            <div class="container-fluid" style="justify-content: space-between;  display: flex; font-size: larger;">
                 <a class="navbar-brand" href="./index.html">
                     <span class="Navlogoname">GUI RATCHAYO!</span>
                 </a>
                 <span style="justify-content: end;">
-                    <a href="#">
+                    <a href="./Menu.html">
                         <button type="button" class="nav-btn">
                             <i class="fa-solid fa-thin fa-pot-food"></i>
                             <span class="Nav-span">Menu</span>
                     </a>
-                    <a href="./Gallary.html">
+                    <a href="./Gallery.html">
                         <button type="button" class="nav-btn">
                             <i class="fa-solid fa-image"></i><span class="Nav-span">Gallery</span>
                         </button>
                     </a>
-                    <a href="./Booking.html">
+                    <a href="#">
                         <button type="button" class="nav-btn">
                             <i class="fa-solid fa-book"></i>
                             <span class="Nav-span">Book Now!</span>
@@ -55,96 +47,46 @@
         </nav>
     </header>
 
-    <main>
-        <hr class="mt-5">
-        <div class="container-catagories"
-            style="background-color: #274b44;margin: 0;height: 50px;display: flex;align-items: center; font-size: 1.5rem;">
-            <a class="ms-5 catagories" href="">ผัดๆทอดๆ &nbsp; 🥘 &nbsp; 🍳 &nbsp;</a>
-            <a class="catagories" href="">ต้มๆซดน้ำ &nbsp; 🍲 &nbsp;</a>
-            <a class="catagories" href="">ยำ &nbsp; 🌶️ &nbsp;</a>
-        </div>
-        <hr>
-        <div id="menu-container-pad"></div>
+    <img src="./assets/image/Menu/manu-bg1.jpg" alt="" class="bg">
 
-        <div class="container-catagories" style="color: #274b44;
-            margin: 0;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            font-size: 1.5rem;">
-            <p class="ms-5">ต้มๆซดน้ำ &nbsp; 🍲 &nbsp;</p>
+    <div class="background-box">
+        <div class="content-box">
+            <div class="H">Gui ratchayo!</div>
+            <div class="H1">Gui ratchayo!</div>
+            <div class="H3">Gui ratchayo!</div>
+            <div class="line1"></div>
         </div>
-        <hr class="catagories-2">
-        <div id="menu-container-tom">
-        </div>
+        <div class="re">Recommend</div>
+    </div>
+    
 
-        <div class="container-catagories" style="color: #274b44;
-            margin: 0;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            font-size: 1.5rem;">
-            <p class="ms-5">ยำ 🌶️ 🍋‍🟩 &nbsp;</p>
-        </div>
-        <hr class="catagories-2">
-        <div id="menu-container-yam">
-        </div>
-        <div class="blank" style="height: 100px;"></div>
-    </main>
 
-    <div id="modal-all"></div>
-
-    <div class="container d-flex">
-        <div class="fixed-container d-flex" style="color: white; cursor: pointer;" data-toggle="modal"
-            data-target="#exampleModal">
-            <i class="fa-solid fa-cart-shopping me-5" style="font-size: 1.5rem; color:white;"></i>
-            <span id="cartAmount">0</span>&nbsp;<span>รายการในตะกร้า</span>
-            <div class="costCart">
-                <span id="cartCost">
-                    ฿0
-                </span>
-            </div>
+    <div class="main">
+        <div class="box-2">
+            <img src="./assets/image/Menu/ป้ายสามเหลียม-01.png" alt="" class="pak1">
+            <p class="pak_1">ผัดผักบุ้งฝอย</p>
+        </div>
+        <div class="box-3">
+            <img src="./assets/image/Menu/ป้ายสามเหลียม-02.png" alt="" class="pak2">
+            <p class="pak_2">ยำไข่ดาว</p>
+        </div>
+        <div class="box-4">
+            <img src="./assets/image/Menu/ป้ายสามเหลียม-03.png" alt="" class="pak3">
+            <p class="pak_3">กะหล่ำปลีน้ำปลากุ้งแห้ง</p>
+        </div>
+        <div class="box-5">
+            <img src="./assets/image/Menu/ป้ายสามเหลียม-04.png" alt="" class="pak4">
+            <p class="pak_4">หอยลายผัดพริกเผา</p>
+        </div>
+        <div class="box-6">
+            <img src="./assets/image/Menu/ป้ายสามเหลียม-05.png" alt="" class="pak5">
+            <p class="pak_5">คะน้าปลาเค็ม</p>
+        </div>
+        <div class="box-7">
+            <img src="./assets/image/Menu/ป้ายสามเหลียม-06.png" alt="" class="pak6">
+            <p class="pak_6">คะน้าหมูกรอบ</p>
         </div>
     </div>
-
-    <div id="exampleModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-${item.id}"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content" style="background-color: #274b44;">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="myModalLabel-${item.id}">
-                        <p class="mb-0" style="color: white;">รายการในตะกร้า</p>
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="order-food">
-                    <div class="item-cart" id="itemCartAll"></div>
-
-                    <div class="modal-footer">
-                        <div class="card w-100">
-                            <div class="card-body footer-cart d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span>รวมทั้งหมด:</span>
-                                    <span id="cartCostFooter" class="ms-2">฿0.00</span>
-                                </div>
-                                <button class="food-btn w-100 ms-3" onclick="">สั่ง
-                                    <span id="cartAmountFooter">0</span> รายการ
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="./assets/js/alert.js"></script>
-    <script src="./assets/js/menu.js"></script>
-    <script src="./assets/js/script.js"></script>
-
 
 </body>
 

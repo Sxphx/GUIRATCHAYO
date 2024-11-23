@@ -29,13 +29,13 @@ body {
 }
 
 
-header h1 {
+title h1 {
     font-size: 3.5rem;
     color: #FF0000;
     margin-bottom: 10px;
 }
 
-header p {
+title p {
     font-size: 2rem;
     color: #FF0000;
     font-weight: bold;
