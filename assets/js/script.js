@@ -99,7 +99,7 @@ function showBookModal(customerName, phone, date, time, amountOfPeople) {
 }
 
 function preOrder(customerName, phone, amount, date, time) {
-  const url = `Menu.html?customerName=${customerName}&phone=${phone}&amount=${amount}&date=${date}&time=${time}`;
+  const url = `PreOrder.html?customerName=${customerName}&phone=${phone}&amount=${amount}&date=${date}&time=${time}`;
 
   window.open(url, '_blank');
 }
