@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    left: 0;
+    right: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #FEEEDD;
+}
+
+
+.background-box {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    /* background-color: #FEEEDD; */
+    opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: -555px;
+}
+
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.H,
+.H1,
+.H3 {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 50px !important;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.H {
+    opacity: 0.5;
+    /* margin-top: 18px;
+    margin-left: 14px; */
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+
+.H1 {
+    /* margin-top: 7px;
+    
+    margin-left: 7px; */
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.H3 {
+    color: #EB0027 !important;
+    
+}
+
+.re {
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    color: #EB0027;
+    margin-top: 20px;
+}
+
+/* Divider line */
+.line1 {
+    position: relative;
+    background-color: #274B44;
+    margin-top: -300px;
+    height: 5px;
+    width: 400px;
+    left: 0;
+    right: 0;
+    justify-self: center;
+}
+
+/* Main Content Grid */
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 300px;
+}
+
+[class^="box-"] {
+    background-color: #ffffff;
+    height: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[class^="pak"] {
+    width: 300px;
+    margin-top: 30px;
+    flex-shrink: 0;
+}
+
+[class^="pak_"] {
+    margin-top: auto;
+    margin-bottom: 30px;
+    font-size: 35px;
+    color: #013120;
+    text-align: center;
+}
+
+/* Styling for images in boxes */
+.pak1,
+.pak2,
+.pak3,
+.pak4,
+.pak5,
+.pak6 {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Hover effects for links */
+a:hover {
+    color: #eb0027;
+    text-decoration: underline;
+}
+
+/* Styling for background image */
+.bg {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+/* Box layout */
+.box {
+    position: absolute;
+    margin-top: -450px;
+    background-color: #FEEEDD;
+    opacity: 0.6;
+    width: 1440px;
+    height: 300px;
+}
+
+/* Box for header text */
+.Ma1 {
+    position: relative;
+    text-align: center;
+}

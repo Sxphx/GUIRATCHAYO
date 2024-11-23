@@ -30,7 +30,6 @@ body {
   overflow-x: hidden;
 }
 
-
 nav {
   margin: 15px;
   border-radius: 15px;
@@ -49,6 +48,7 @@ nav:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: large;
 }
 
 .nav-btn:hover,

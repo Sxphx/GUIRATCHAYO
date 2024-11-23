@@ -1,0 +1,111 @@
+body,
+h1,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: #333;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background-overlay {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 1000px;
+    width: 95%;
+    justify-self: center;
+    text-align: center;
+}
+
+
+header h1 {
+    font-size: 3.5rem;
+    color: #FF0000;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 2rem;
+    color: #FF0000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 1rem;
+}
+
+.contact-info ul {
+    margin: 20px 0;
+}
+
+.contact-info ul li {
+    margin: 10px 0;
+}
+
+.contact-info ul a {
+    color: #0000FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info ul a:hover {
+    text-decoration: underline;
+}
+
+.contact-info img {
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+p {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+
+.contact-address {
+    text-align: center;
+    /* จัดให้อยู่กึ่งกลาง */
+    margin-top: 20px;
+    /* เพิ่มระยะห่างด้านบน */
+}
+
+.contact-address p {
+    font-size: 1.2rem;
+    /* ปรับขนาดข้อความให้ชัดเจน */
+    margin-bottom: 15px;
+    /* เพิ่มระยะห่างระหว่างข้อความกับแผนที่ */
+    line-height: 1.6;
+    /* เพิ่มความสูงบรรทัดให้อ่านง่าย */
+    color: #333;
+    /* ใช้สีตัวอักษรที่สบายตา */
+}
+
+.contact-address .map {
+    width: 450px;
+    /* ใช้พื้นที่เต็มคอนเทนเนอร์ */
+    max-width: 600px;
+    /* กำหนดขนาดสูงสุดของแผนที่ */
+    height: auto;
+    /* ให้ความสูงปรับตามสัดส่วน */
+
+
+    cursor: pointer;
+    /* แสดงไอคอน pointer เมื่อเลื่อนเมาส์ */
+    margin-top: 10px;
+    /* เพิ่มระยะห่างระหว่างข้อความกับแผนที่ */
+}
