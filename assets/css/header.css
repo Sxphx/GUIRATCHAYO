@@ -11,9 +11,11 @@ a {
 }
 
 a:hover {
-  text-decoration: none;
-  color: rgb(212, 210, 210);
+  color: #eb0027;
+  text-decoration: underline;
 }
+
+
 
 body {
   background-color: #feeeddee;

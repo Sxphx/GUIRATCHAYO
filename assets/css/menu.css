@@ -10,6 +10,7 @@
 body {
     height: 200%;
 }
+
 .item {
     background-color: white;
     border: 1px solid #ddd;
@@ -80,11 +81,6 @@ body {
 .food-btn:hover {
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
-}
-
-a {
-    text-decoration: none;
-    color: white;
 }
 
 a.catagories {
