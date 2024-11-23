@@ -76,14 +76,13 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 30px;
     color: #EB0027;
-    margin-top: 20px;
 }
 
 /* Divider line */
 .line1 {
     position: relative;
     background-color: #274B44;
-    margin-top: -300px;
+    margin-top: 105px;
     height: 5px;
     width: 400px;
     left: 0;
