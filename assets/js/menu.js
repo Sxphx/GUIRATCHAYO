@@ -124,7 +124,7 @@ function updateCartDisplay() {
     const cartCostFooter = document.getElementById('cartCostFooter');
     const cartAmountFooter = document.getElementById('cartAmountFooter');
 
-    itemCartAll.innerHTML = ""; // Clear previous cart items
+    itemCartAll.innerHTML = "";
 
     if (cart.length === 0) {
         itemCartAll.innerHTML = "<p>Your cart is empty.</p>";
@@ -138,7 +138,7 @@ function updateCartDisplay() {
     let totalCost = 0;
     let totalItems = 0;
 
-    // Loop through cart items and populate the cart display
+   
     for (let i = 0; i < cart.length; i++) {
         const cartItem = cart[i];
         const itemCost = cartItem.price * cartItem.quantity;
@@ -168,7 +168,7 @@ function updateCartDisplay() {
         itemCartAll.innerHTML += cartHTML;
     }
 
-    // Update footer and top cart summary
+
     const totalCostFormatted = `฿${totalCost.toFixed(2)}`;
     cartCost.innerText = totalCostFormatted;
     cartAmount.innerText = totalItems;
